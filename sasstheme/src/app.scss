@@ -1,0 +1,392 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+@import 'colors';
+@import 'header';
+@import 'content';
+@import 'footer';
+
+$left: left;
+$right: right;
+
+body {
+  background-color: $background;
+  font-family: 'Sofia Pro', sans-serif;
+}
+a
+{
+  text-decoration: none;
+}
+
+#header
+{
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  left: 0px;
+  padding: 50px 0;
+  background-color: transparent;
+  .container-fluid
+  {
+    padding: 0 100px;
+  }
+}
+
+#header-image
+{
+  float: $left;
+}
+
+.main-header
+{
+  .nav
+  {
+    float: $right;
+    flex-direction: row;
+  }
+  li:last-child
+  {
+    a 
+    {
+      font-size: 16px;
+      color: #fff;
+      background: #FF7300;
+      border:1px #FF7300 solid;
+      padding: 8px 25px;
+      top: -12px;
+      position: relative;
+      display: inline-block;
+    }
+    a:hover
+    {
+      color: #fff;
+      background: transparent;
+      border-color: #fff;
+    }
+  }
+  li
+  {
+    display: inline-block;
+    position: relative;
+    ul 
+    {
+       position:absolute;
+       display: none;
+       left: 25px;
+       width: 170px;
+       padding:20px;
+       top: 40px;
+       background: #15171F;
+       border-top: 2px #FF7300 solid;
+       a 
+       {
+         padding:7px 0px;
+         color:#A8ABB2;
+       }
+    }
+
+      ul 
+      {
+        li:last-child 
+        {
+          a
+          {
+            background: transparent;
+            padding: 7px 0px;
+            color: #A8ABB2;
+            top: 0px;
+          }
+          a:hover
+          {
+            color: #FF7300;
+          }
+        }
+      }
+    a 
+    {
+      display:inline-block;
+      padding:0 25px 18px;
+      color: $light;
+      text-decoration: none;
+    }
+    a:hover
+    {
+      color: $primary;
+    }
+  }
+  li.selected
+  {
+    a 
+    {
+      color: #FF7300;
+    }
+    li 
+    {
+      a 
+      {
+        color: #A8ABB2;
+      }
+    }
+    li:hover 
+    {
+      a
+      {
+        color: #FF7300;
+      }
+    }      
+  }
+  li:hover
+  {
+    ul 
+    {
+      display: block;
+    }
+  }
+  li.menu-item-has-children
+  {
+    background-image: url(images/dd-icon-dwn.png);
+    background-repeat: no-repeat;
+    background-position: right 11px;
+  }
+  li.menu-item-has-children:hover
+  {
+    background-image: url(images/dd-icon-up.png);
+  }
+  
+}
+
+body .metaslider {
+  overflow: hidden;
+  text-align: center;
+  .flexslider .flex-direction-nav li a {
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/slider-nav.png');
+  }
+  .flexslider .flex-direction-nav li.flex-nav-prev a
+  {
+    left: 100px;
+  }
+  .flexslider .flex-direction-nav li.flex-nav-next a
+  {
+    right: 100px;
+  }
+  .caption-wrap
+  {
+    bottom: 25%;
+    background: transparent;
+    opacity: 1;
+    transform: translateY(-30%);
+    h2 
+     {
+       font-size: 60px;
+       font-weight: 600;
+     }
+     p 
+     {
+       font-size: 16px;
+       color: #D3D8E2;
+       line-height: 160%;
+       max-width: 700px;
+       margin: 10px auto 20px !important;
+     }
+     a
+     {
+       font-size: 16px;
+       color: #fff;
+       background: #FF7300;
+       border: 1px #FF7300 solid;
+       padding: 10px 25px;
+       display: inline-block;
+     }
+     a:hover
+     {
+       background:transparent;
+       border-color: #fff;
+     }
+  }
+}
+
+#logo-carousel-section
+{
+    padding: 30px 0;
+   .lgx-logo-slider-wp
+    {
+      .hover-default
+      {
+        .lgx-logo-item
+        {
+          .lgx-logo-img
+          {
+            height: auto;
+            width: auto;
+          }
+        }
+      }
+    }
+
+  }
+
+  .homepage-content
+  {
+    color: #fff;
+    h1 
+    {
+      font-size: 50px;
+      text-align: center;
+      font-weight: 600;
+      margin:50px 0;
+    }
+    h2 
+    {
+      font-size: 16px;
+    }
+    p 
+    {
+      color: #A8ABB2;
+    }
+    .wp-block-image 
+    {
+      margin: 0;
+      margin-right: 30px;
+      float: left;
+      height: 100%;
+    }
+    .wp-block-column 
+    {
+      margin-right: 50px;
+    }
+    .wp-block-column:last-child 
+    {
+      margin-right: 0;
+    }
+
+    .numbers-section
+    {
+      max-width: 800px;
+      margin: 80px auto;
+      .wp-block-image 
+        {
+          margin-right: 20px;
+        }
+        h3 
+        {
+          font-size: 28px;
+          position: relative;
+          top: -3px;
+          margin-bottom: -3px;
+        }
+        p
+        {
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+    }
+}
+
+.mobmenu-content #mobmenuright li:hover a {
+  color: #fff;
+}
+
+@media only screen and (max-width:1600px)
+{
+
+body .metaslider .caption-wrap {
+    bottom: 15%;
+    transform: translateY(0%);
+}  
+
+}
+
+@media only screen and (max-width:1024px)
+{
+
+body 
+{
+  .mobmenur-container {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 9999;
+  }
+  .flexslider .flex-direction-nav li.flex-nav-prev a
+  {
+    left: 10px;
+  }
+  .flexslider .flex-direction-nav li.flex-nav-next a
+  {
+    right: 10px;
+  }
+}
+
+#header .container-fluid
+{
+  padding: 0 50px;
+}
+
+body .metaslider .caption-wrap {
+    bottom: 20px;
+    transform: translateY(0%);
+    h2 
+    {
+      font-size: 40px;
+    }
+}  
+
+
+}
+
+@media only screen and (max-width:768px)
+{
+
+  body .metaslider {
+    .caption-wrap
+    {
+      position: relative;
+      padding:30px 20px;
+      background: #000;
+      h2 
+      {
+        font-size: 30px;
+      }
+    }
+  } 
+
+  .homepage-content {
+    padding: 0 30px;
+    h1
+    {
+    font-size: 36px;
+    margin: 0 0 50px 0;
+    }
+    .wp-block-image {
+      margin-right: 15px;
+    }
+    .wp-block-column {
+      margin-bottom: 30px;
+      flex-basis: calc(100%)!important;
+      margin-left: 0px;
+      p 
+      {
+        display: flow-root;
+      }
+    }
+    .wp-block-columns
+    {
+      margin-bottom: 0px;
+    }
+    .numbers-section 
+    {
+      margin: 30px auto 0;
+    }
+  } 
+  body .metaslider .flexslider .flex-direction-nav li.flex-nav-prev a 
+  {
+    left: 0px;
+  }
+  body .metaslider .flexslider .flex-direction-nav li.flex-nav-next a 
+  {
+    right: 0px;
+  }
+
+
+}
